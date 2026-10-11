@@ -1,0 +1,186 @@
+/*For loading and defining the Pacifico font used in the website */
+@font-face {
+    font-family: Pacifico;
+    src: url("fonts/Pacifico-Regular.ttf") format("truetype");
+}
+/*Först skrev jag bara font-family: Pacifico, men det fungerade inte eftersom webbläsaren inte hade typsnitt tillgänglig. Jag hittade Pacifico på Google Fonts och laddade ner fontfilen (sagt i Webbtypsnitt i handouten). Fontfilen måste följa med projektets filer, annars behöver jag byta till ett vanligt typsnitt som finns tillgängligt.*/
+/*Styling the wole page */
+body {
+    margin: 0;
+    background-color: #FAF8D4;
+    
+    /*for covering the harmonized color on the both sides of the background image*/
+    background-image:
+        url("Images Folder/background-cake01.jpg"),
+        linear-gradient(to right, #FDC3DE,#FAF8D4, #FCD3DE);
+
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: cover, contain, cover;
+    background-position: center, center top, center;
+
+     color : #564138;
+}
+.tartor-page {
+    background-image: url("Images Folder/background-cake02.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+/*to make a transparent glass like a background behined the content*/
+.glass-container {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    padding:20px;
+    background-color: rgba(255, 255, 255, 0.30);
+    border-radius: 15px;
+}
+
+/*Styling the main Sugar Bloom heading*/
+h1 {
+    text-align: center;
+    font-family: Pacifico;
+}
+/*Keeps the Hem and Meny inside the same content area as the rest of the page */
+nav {
+    display: flex;
+    justify-content: flex-start;
+    /*Ads 25xp space from the left side and 20px gap between Hem and Meny*/
+    gap: 20px;
+    /* controls the width of the navigation area.*/
+    max-width: 900px;
+    /*centers the navigation area */
+    margin: 0 auto;
+    /*20px space inside, left and right*/
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+/*Style of the Hem and Meny */
+nav a{
+    color: #564138;
+    text-decoration: none;
+    margin-right: 20px;
+}
+/*Style of the intro text */
+#meny p {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.45);
+    padding: 10px 20px;
+    max-width: 700px;
+    margin: 15px auto;
+    /*Rounded corners*/
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+/*Layout of the 3 menu boxes*/
+.menu-box {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap:20px;
+    /*the cards were spread too far apart on large screens, this keeps centered with a controled distance between them. */
+    max-width: 900px;
+    margin: auto;
+}
+/*Style of the menu box */
+.menu-box a {
+    background-color: #FCD3DE;
+    padding: 20px;
+    color: #564138;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+}
+.menu-box img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
+/* On mobile: image next to the button. 
+   On desktop: image above the button.*/
+.menu-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+/* to remove the space between the image and the button */
+    gap: 0px;
+}
+#about {
+  background-color:#EBDCCB;
+  /*can be les than 600 not more*/
+  max-width: 600px; 
+  /*auto means center in the row*/ 
+  margin:25px auto;
+  padding: 20px; 
+}
+#about h2 {
+    text-align: center;
+}
+/*Layout of the footer */
+footer {
+  display: flex;
+  flex-direction: column;  
+  align-items:center;
+  max-width: 900px;
+  margin: 25px auto 0;
+  gap: 40px;
+}
+/*Style of the each footer box */
+footer p {
+    background-color: #EBDCCB;
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+}
+/*Order form layout*/
+.order-form{
+    display: flex;
+    flex-direction:column;
+    gap: 12px;
+    max-width: 500px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.55) ;
+    border-radius: 10px;
+}
+/*Makes the forms have same width*/
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+/*to make the box taller*/
+.order-form textarea {
+    min-height: 120px;
+}
+/*submit button style*/
+.order-form button {
+    padding: 12px 20px;
+    margin-top: 10px;
+    background-color: #FCD3DE;
+    color: #564138;
+    border: none;
+    cursor: pointer;
+}
+
+/*Responsive change i bigger screens */
+@media (min-width: 700px){
+.menu-box{
+    flex-direction: row;
+    justify-content: center;
+}
+/*if the screen was 700px and wider, image above the button*/
+.menu-item {
+    flex-direction: column;
+    /*Small space between the image and the button.*/
+    gap: 0px;
+}
+
+/**/
+footer {
+    flex-direction: row;
+    /*Keeps the footer boxes centered so they do not spread across the screen. */
+    justify-content: center;
+}
+}

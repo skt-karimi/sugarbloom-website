@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta 
+    name="description"
+    content="Utforska Sugar Bloom tårtor för olika firande och speciella tillfällen."
+    >
+    <title>Sugar Bloom | Tårtor</title>
+</head>
+<body class="tartor-page">
+    <h1>Sugar Bloom</h1>
+    <div class="glass-container">
+
+    <nav>
+        <a href="index.html">Hem</a>
+        <a href="index.html#meny">Meny</a>
+    </nav>
+         <main>
+            <form class="order-form">
+
+               <label for="namn">Namn: </label>
+               <input type="text" id="namn" name="namn">
+            
+               <label for="efternamn">Efteramn: </label>
+               <input type="text" id="efternamn" name="efternamn">
+            
+
+               <label for="tarta">Våld tårta: </label>
+               <select id="tarta" name="tarta">
+                 <option>Frukttårta</option>
+                 <option>Chokladtårta</option>
+                 <option>Jordgubbstårta</option>
+               </select>
+           
+                  <label for="email">E-post: </label>
+                  <input type="email" id="email" name="email">
+
+                 <label for="datum">Upphämtningsdatum: </label>
+                 <input type="date" id="datum" name="datum">
+
+                 <label for="vikt">Vikt: </label>
+                 <select id="vikt" name="vikt">
+                 <option>Välj vikt</option>
+                 <option>1 kg</option>
+                 <option>2 kg</option>
+                 <option>3 kg</option>
+
+              </select>
+                <label for="onskemal">
+                 Berätta gärna hur du vill att tårtan ska dekoreras. 
+              </label>
+               <textarea id="onskemal" name="onskemal"></textarea>
+
+               <label for="allergi">Har du några allergier?</label>
+               <input type="text" id="allergi" name="allergi">
+            <button type="submit">Skicka beställning</button>
+            
+            </form>
+         </main>
+         
+    
+    </div>
+</body>
+</html>
