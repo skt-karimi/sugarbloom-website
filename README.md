@@ -30,4 +30,4 @@ The website includes:
 
 ## Image credits
 
-The project uses images from Pexels and Unsplash. Image sources and credits are documented separately.
+[View image sources and credits](IMAGE_SOURCES.md)
